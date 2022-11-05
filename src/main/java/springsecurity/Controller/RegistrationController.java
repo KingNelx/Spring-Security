@@ -18,7 +18,7 @@ public class RegistrationController {
     private UserService userService;
 
     @PostMapping("/register")
-    public String registerUser(@RequestBody UserModel){
-        User user = userService.registerUser(User);
+    public String registerUser(@RequestBody UserModel userModel){
+        User user = userService.registerUser(userModel);
     }
 }

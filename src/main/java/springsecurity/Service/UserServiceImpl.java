@@ -15,8 +15,11 @@ public class UserServiceImpl implements UserService{
     @Override
     public User registerUser(UserModel userModel) {
         User user = new User();
-        user.setEmail(user.getEmail());
-        user.setPassword((user.getPassword()));
+        user.setEmail(userModel.getEmail());
+        user.setFirstName(userModel.getFirstName());
+        user.setLastName(userModel.getLastName());
+        user.setPassword(userModel.getPassword());
+        user.setRole("USER");
         return null;
     }
 }
